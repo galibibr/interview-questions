@@ -59,7 +59,7 @@ function getSquirrelNames(tree) {
 
 }
 
-getSquirrelNames(); // ["Имя белки1", "Имя белки2", "Имя белки3"]
+getSquirrelNames(tree); // ["Имя белки1", "Имя белки2", "Имя белки3"]
 
 ```
 
