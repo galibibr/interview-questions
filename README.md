@@ -79,8 +79,7 @@ function groupBy(items, callbackFn) {
 
 }
 
-groupBy([6.1], [4.2], [6.3], Math.floor); // { 6: [6.1, 6.3], 4: [4.2] }
-groupBy(["one", "two", "three"], "length"); // { 3: ['one', 'two'], 5: ['three'] }
+groupBy([[6.1], [4.2], [6.3]], Math.floor); // { 6: [6.1, 6.3], 4: [4.2] }
 
 const inventory = [
   { name: "asparagus", type: "vegetables", quantity: 5 },
