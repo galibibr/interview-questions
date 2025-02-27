@@ -105,6 +105,7 @@ groupBy(inventory, ({ type }) => type);
     { name: "fish", type: "meat", quantity: 22 }
   ]
 }
+*/
 
 ```
 
