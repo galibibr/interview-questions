@@ -149,26 +149,35 @@ n = 2
 
 ## 6. [tech]
 
-Нужно чтобы при вызове функций, в консолье ответы выводились в том порядке в которым были вызваны функции
+Напишите callback функцию чтобы при вызове функций, в консолье ответы выводились в том порядке в которым были вызваны функции, функций foo, bar, baz трогать нельзя.
 
 ``` javascript
 function foo(cb) {
-    setTimeout(() => {
-        cb('A')
-    }, Math.random() * 100);
+   setTimeout(() => {
+      cb('A')
+   }, Math.random() * 100);
 }
 
 function bar(cb) {
-    setTimeout(() => {
-        cb('B')
-    }, Math.random() * 100);
+   setTimeout(() => {
+      cb('B')
+   }, Math.random() * 100);
 }
 
 function baz(cb) {
-    setTimeout(() => {
-        cb('C')
-    }, Math.random() * 100);
+   setTimeout(() => {
+      cb('C')
+   }, Math.random() * 100);
 }
+
+const callback = (res) => {
+   console.log(res)
+   // Your solution
+}
+
+foo(callback); // A
+bar(callback); // B
+baz(callback); // C
 
 ```
 
