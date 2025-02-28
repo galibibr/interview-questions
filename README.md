@@ -171,8 +171,8 @@ function baz(cb) {
 }
 
 const callback = (res) => {
-   console.log(res)
    // Your solution
+   console.log(res)
 }
 
 foo(callback); // A
