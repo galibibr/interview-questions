@@ -270,3 +270,41 @@ function parallelLimit(urls, limit, callback) {
 
 }
 ```
+
+### 10. [AA]
+
+
+Дан массив ссылок: ['url1', 'url2', ...] и лимит одновременных запросов (limit)
+Необходимо реализовать функцию, которая опросит урлы в том порядке, в котором
+они идут в массиве, и вызовет callback с массивом ответов
+['url1_answer', 'url2_answer', ...] так, чтобы в любой момент времени
+выполнялось не более limit запросов (как только любой из них завершился, сразу же
+отправлялся следующий).
+То есть нужно реализовать шину с шириной равной limit.
+
+Требования:
+- Порядок в массиве ответов должен совпадать с порядком в массиве ссылок
+- Для опроса можно использовать fetch
+- Ошибки обрабатывать не нужно
+- declare function fetch (url: string): Promise<string>;
+
+```javascript
+function parallelLimit(urls, limit, callback) {
+    
+}
+
+const urls = [
+    "https://jsonplaceholder.typicode.com/todos/1",
+    "https://jsonplaceholder.typicode.com/todos/2",
+    "https://jsonplaceholder.typicode.com/todos/3",
+    "https://jsonplaceholder.typicode.com/todos/4",
+    "https://jsonplaceholder.typicode.com/todos/5",
+    "https://jsonplaceholder.typicode.com/todos/6",
+    "https://jsonplaceholder.typicode.com/todos/7",
+];
+const limit = 2;
+
+parallelLimit(urls, limit, (results) => {
+    console.log(results);
+});
+```
